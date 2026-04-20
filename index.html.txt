@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>StudentHub AI</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<h1>StudentHub AI Dashboard</h1>
 
-<div class="intro">
-  <h1>Welcome to StudentHub AI</h1>
-  <p><b>Owner:</b> Hasna Jaweria</p>
-  <p><b>Field:</b> Student of CS/IT</p>
-  <p><b>University:</b> WPGC</p>
-
-  <h2>Login</h2>
-  <input type="text" id="username" placeholder="Enter Username">
-  <button onclick="login()">Enter App</button>
-</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<div class="card" onclick="openGPA()">📊 GPA Calculator</div>
+<div class="card" onclick="openNotes()">📝 Notes</div>
+<div class="card" onclick="openAssignment()">📚 Assignment</div>
+<div class="card" onclick="openPlanner()">⏰ Planner</div>
