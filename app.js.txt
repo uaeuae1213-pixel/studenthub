@@ -1,10 +1,39 @@
+// show/hide sections
+function toggle(id){
+  let box = document.getElementById(id);
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// GPA
 function calcGPA(){
   let marks = document.getElementById("marks").value;
   let gpa = (marks / 100) * 4;
-  alert("GPA: " + gpa);
+  document.getElementById("gpaResult").innerText = "GPA: " + gpa.toFixed(2);
 }
 
+// Notes (save locally)
 function saveNote(){
   let note = document.getElementById("note").value;
-  localStorage.setItem("note", note);
+
+  let notes = JSON.parse(localStorage.getItem("notes")) || [];
+  notes.push(note);
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+
+  showNotes();
+}
+
+function showNotes(){
+  let notes = JSON.parse(localStorage.getItem("notes")) || [];
+  document.getElementById("list").innerHTML =
+    notes.map(n => "<li>"+n+"</li>").join("");
+}
+
+showNotes();
+
+// Assignment generator
+function generate(){
+  let topic = document.getElementById("topic").value;
+  document.getElementById("output").innerText =
+  "Assignment on " + topic + " includes introduction, explanation, examples and conclusion.";
 }
