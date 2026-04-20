@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Dashboard</h1>
+<p id="welcome"></p>
+
+<h2>GPA Calculator</h2>
+<input type="number" id="marks" placeholder="Enter Marks">
+<button onclick="calculateGPA()">Calculate GPA</button>
+<p id="gpaResult"></p>
+
+<h2>Notes</h2>
+<input type="text" id="noteInput" placeholder="Write note">
+<button onclick="saveNote()">Save Note</button>
+<ul id="notesList"></ul>
+
+<script>
+let user = localStorage.getItem("user");
+document.getElementById("welcome").innerText = "Welcome " + user;
+
+// GPA
+function calculateGPA() {
+  let marks = document.getElementById("marks").value;
+  let gpa = (marks / 100) * 4;
+  document.getElementById("gpaResult").innerText = "GPA: " + gpa.toFixed(2);
+}
+
+// Notes
+function saveNote() {
+  let note = document.getElementById("noteInput").value;
+  let li = document.createElement("li");
+  li.innerText = note;
+  document.getElementById("notesList").appendChild(li);
+}
+</script>
+
+</body>
+</html>

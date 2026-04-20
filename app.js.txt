@@ -1,0 +1,5 @@
+function login() {
+  let user = document.getElementById("username").value;
+  localStorage.setItem("user", user);
+  window.location.href = "dashboard.html";
+}
