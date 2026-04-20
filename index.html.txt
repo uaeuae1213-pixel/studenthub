@@ -1,6 +1,3 @@
-<h1>StudentHub AI Dashboard</h1>
-
 <div class="card" onclick="openGPA()">📊 GPA Calculator</div>
 <div class="card" onclick="openNotes()">📝 Notes</div>
 <div class="card" onclick="openAssignment()">📚 Assignment</div>
-<div class="card" onclick="openPlanner()">⏰ Planner</div>
