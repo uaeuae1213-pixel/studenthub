@@ -1,3 +1,41 @@
-<div class="card" onclick="openGPA()">📊 GPA Calculator</div>
-<div class="card" onclick="openNotes()">📝 Notes</div>
-<div class="card" onclick="openAssignment()">📚 Assignment</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudentHub AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎓 StudentHub AI</h1>
+
+<div class="card" onclick="toggle('gpa')">📊 GPA Calculator</div>
+<div class="card" onclick="toggle('notes')">📝 Notes</div>
+<div class="card" onclick="toggle('assign')">📚 Assignment</div>
+
+<!-- GPA -->
+<div id="gpa" class="box">
+  <h2>GPA Calculator</h2>
+  <input id="marks" placeholder="Enter Marks">
+  <button onclick="calcGPA()">Calculate</button>
+  <p id="gpaResult"></p>
+</div>
+
+<!-- Notes -->
+<div id="notes" class="box">
+  <h2>Notes</h2>
+  <input id="note" placeholder="Write note">
+  <button onclick="saveNote()">Save</button>
+  <ul id="list"></ul>
+</div>
+
+<!-- Assignment -->
+<div id="assign" class="box">
+  <h2>Assignment Generator</h2>
+  <input id="topic" placeholder="Enter topic">
+  <button onclick="generate()">Generate</button>
+  <p id="output"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
